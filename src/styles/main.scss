@@ -10,3 +10,17 @@
   z-index: 10;
 }
 
+.resize-handle {
+  width: 15px;
+  height: 15px;
+  background-color: #ddd;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: nwse-resize;
+  z-index: 20;
+}
+
+#card-container {
+  overflow: hidden;
+}
