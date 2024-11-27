@@ -1,0 +1,17 @@
+{
+  "name": "pg-spike-1",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.81.0",
+    "three": "^0.170.0",
+    "vite": "^5.4.10",
+    "vite-plugin-glsl": "^1.3.0"
+  }
+}
