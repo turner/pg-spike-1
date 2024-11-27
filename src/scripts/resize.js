@@ -1,3 +1,5 @@
+import {prettyPrint} from "./utils.js"
+
 function makeResizable(element, resizeHandle) {
     let isResizing = false;
 
@@ -35,7 +37,7 @@ function makeResizable(element, resizeHandle) {
     const resizeObserver = new ResizeObserver((entries) => {
         for (const entry of entries) {
             const { width, height } = entry.contentRect;
-            console.log(`Resized to: ${width}px x ${height}px`);
+            console.log(`Resized to: ${ prettyPrint(width) }px x ${prettyPrint(height)}px`);
         }
     });
 
