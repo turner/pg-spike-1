@@ -1,5 +1,10 @@
+body {
+  background-color: aliceblue;
+}
+
 .card-header {
-  cursor: move; /* Indicates the draggable area */
+  cursor: move;
+  background-color: #c4dde6;
 }
 
 .card {
@@ -7,6 +12,7 @@
   top: 100px;
   left: 100px;
   z-index: 10;
+  background-color: #ffffff;
 }
 
 .resize-handle {
