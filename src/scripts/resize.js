@@ -8,11 +8,11 @@ function makeResizable(element, resizeHandle) {
         isResizing = true;
 
         // Listen for mouse movement and resize the element
-        document.addEventListener('mousemove', resizeElement);
-        document.addEventListener('mouseup', stopResizing);
+        document.addEventListener('mousemove', doResize);
+        document.addEventListener('mouseup', stopResize);
     });
 
-    function resizeElement(event) {
+    function doResize(event) {
         if (!isResizing) return;
 
         // Update the size of the element
@@ -27,10 +27,10 @@ function makeResizable(element, resizeHandle) {
         element.style.height = `${Math.max(newHeight, minHeight)}px`;
     }
 
-    function stopResizing() {
+    function stopResize() {
         isResizing = false;
-        document.removeEventListener('mousemove', resizeElement);
-        document.removeEventListener('mouseup', stopResizing);
+        document.removeEventListener('mousemove', doResize);
+        document.removeEventListener('mouseup', stopResize);
     }
 
     // Observe size changes dynamically
